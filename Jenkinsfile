@@ -44,3 +44,4 @@ pipeline {
         }
     }
 }
+// /usr/share/nginx/html
