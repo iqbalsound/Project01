@@ -32,7 +32,7 @@ pipeline {
                             sshTransfer(
                                 sourceFiles: '**/*',
                                 removePrefix: '',
-                                remoteDirectory: '/usr/share/nginx/html/index.html', //'/home/iqbal/webserver/html/',
+                                remoteDirectory: '/usr/share/nginx/html/', //'/home/iqbal/webserver/html/',
                                 execCommand: 'sudo systemctl restart nginx'
                             )
                         ],
