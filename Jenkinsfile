@@ -25,8 +25,8 @@ pipeline {
 	
 		stage ('syncing Git Repo') {
 		  steps {
-			//sh 'rsync -a /home/iqbal/Project01  iqbal@100.0.0.10:/usr/share/nginx/html'
-			sh 'scp -r /home/iqbal/Project01 iqbal@100.0.0.10:/usr/share/nginx/html'
+			sh 'rsync -a /home/iqbal/Project01  iqbal@100.0.0.10:/usr/share/nginx/html'
+			//sh 'scp -r /home/iqbal/Project01 iqbal@100.0.0.10:/usr/share/nginx/html'
 	}
 	}
 
@@ -37,9 +37,9 @@ pipeline {
                         configName: 'nginx-server',
                         transfers: [
                             sshTransfer(
-                                sourceFiles: '/home/iqbal/Project01/',
+                                sourceFiles: '/home/iqbal/Project01',
                                 removePrefix: '',
-                                remoteDirectory: '/usr/share/nginx/html/',
+                                remoteDirectory: '/usr/share/nginx/html',
                                 execCommand: 'sudo systemctl restart nginx'
                             )
                         ],
