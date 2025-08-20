@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sshPublisher(publishers: [
                     sshPublisherDesc(
-                        configName: 'root',
+                        configName: 'nginx-server',
                         transfers: [
                             sshTransfer(
                                 sourceFiles: '**/*',
