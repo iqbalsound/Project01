@@ -8,26 +8,20 @@ pipeline {
             }
         }
 
-        /*stage('Build') {
+        stage('Build') {
             steps {
                 echo 'Building project...'
                 // If it’s just static files for Nginx, no build is required.
                 // For Node/Java etc., run build commands here.
             }
-        }*/
+        }
 
-        /*stage('Test') {
+        stage('Test') {
             steps {
                 echo 'Running tests...'
                 // Add test commands here (npm test, mvn test, pytest, etc.)
             }
-        }*/
-	
-	stage ('syncing Git Repo')
-	  steps {
-		sh 'rsync -a . iqbal@100.0.0.10:/usr/share/nginx/html'
-
-	}
+        }
 
         stage('Deploy to Nginx') {
             steps {
