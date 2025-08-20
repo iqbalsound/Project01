@@ -36,7 +36,7 @@ pipeline {
                         configName: 'nginx-server',
                         transfers: [
                             sshTransfer(
-                                sourceFiles: '**/*',
+                                sourceFiles: '/home/iqbal/Project01',
                                 removePrefix: '',
                                 remoteDirectory: '/usr/share/nginx/html',
                                 execCommand: 'sudo systemctl restart nginx'
