@@ -38,8 +38,8 @@ pipeline {
                             sshTransfer(
                                 sourceFiles: '/home/iqbal/Project01/',
                                 removePrefix: '',
-                                remoteDirectory: '/usr/share/nginx/html',
-                                execCommand: 'rsync -a /home/iqbal/Project01/  iqbal@100.0.0.10:/usr/share/nginx/html/'
+                                remoteDirectory: '/usr/share/nginx/html/',
+                                execCommand: 'sudo systemctl restart nginx'
                             )
                         ],
                         usePromotionTimestamp: false,
