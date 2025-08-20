@@ -23,10 +23,10 @@ pipeline {
             }
         }*/
 	
-	stage ('syncing Git Repo')
-	  steps {
-		sh 'rsync -a . iqbal@100.0.0.10:/usr/share/nginx/html'
-
+		stage ('syncing Git Repo') {
+		  steps {
+			sh 'rsync -a . iqbal@100.0.0.10:/usr/share/nginx/html'
+	}
 	}
 
         stage('Deploy to Nginx') {
