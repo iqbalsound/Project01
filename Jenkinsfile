@@ -23,13 +23,13 @@ pipeline {
             }
         }*/
 	
-		stage ('syncing Git Repo') {
+/*		stage ('syncing Git Repo') {
 		  steps {
 			sh 'rsync -a /home/iqbal/Project01  iqbal@100.0.0.10:/usr/share/nginx/html'
 			//sh 'scp -r /home/iqbal/Project01 iqbal@100.0.0.10:/usr/share/nginx/html'
 	}
 	}
-
+*/
         stage('Deploy to Nginx') {
             steps {
                 sshPublisher(publishers: [
